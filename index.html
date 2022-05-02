@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fight or Flight</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <span>FIGHT || FLIGHT</span>
+      <div class="links">
+        <span>CONTACT ME:</span>
+        <a href="https://www.linkedin.com/in/aplyushchay/" target="_blank">
+          <img class='link-image' src="assets/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/The-Speck" target="_blank">
+          <img class='link-image' src="assets/github.png" alt="GitHub">
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div id='gameover'>
+        <div class="gameover-content">
+          <h1>GAME OVER</h1>
+          <h3>Try again?</h3>
+          <button class='reset-button' type="button" name="button"><img src="assets/reset.png" alt=""></button>
+        </div>
+      </div>
+      <div id='modal-pause'>
+        <div class="pause">
+          <span>PAUSED</span>
+          <h1>Come find me on GitHub or LinkedIn</h1>
+          <h3>Press ESC to continue</h3>
+          <span>
+            <a href="https://github.com/The-Speck"
+            target="_blank">
+              <img class='pause-image'
+              src="assets/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/aplyushchay/"
+            target="_blank">
+              <img class='pause-image'
+              src="assets/linkedin.png" alt="LinkedIn">
+            </a>
+          </span>
+        </div>
+      </div>
+      <div id="modal">
+        <div class="modal-content">
+          <h1>Welcome to Fight || Flight</h1>
+          <span>Instructions:<br>
+            Use the arrow keys to turn, speed up and down.<br>
+            Press the spacebar to fire.<br>
+            Press ESC to pause.<br>
+            Good Luck!
+          </span>
+          <form class='plane-form'>
+            <h3>Choose your fighter:</h3>
+            <div class="plane-options">
+              <label>
+                <input type="radio" value="0" name="plane" />
+                <img src="assets/plane0.png">
+                <span>Fortress</span>
+              </label>
+              <label>
+                <input type="radio" value="1" name="plane" />
+                <img src="assets/plane1.png">
+                <span>Predator</span>
+              </label>
+              <label>
+                <input type="radio" value="2" name="plane" />
+                <img src="assets/plane2.png">
+                <span>Raptor</span>
+              </label>
+              <label>
+                <input type="radio" value="3" name="plane" />
+                <img src="assets/plane3.png">
+                <span>Spirit</span>
+              </label>
+              <label>
+                <input type="radio" value="4" name="plane" />
+                <img src="assets/plane4.png">
+                <span>Raider</span>
+              </label>
+            </div>
+            <br>
+            <h3>Choose the difficulty:</h3>
+            <div class="game-diff">
+              <label>
+                <input type="radio" value="0" name="diff" />
+                <span>EASY</span>
+              </label>
+              <label>
+                <input type="radio" value="1" name="diff" />
+                <span>MEDIUM</span>
+              </label>
+              <label>
+                <input type="radio" value="2" name="diff" />
+                <span>HARD</span>
+              </label>
+            </div>
+            <br>
+            <hr>
+            <button type="button" name="button" class='start-button'>START</button>
+          <form>
+        </div>
+      </div>
+
+      <canvas id="canvas"></canvas>
+    </main>
+
+    <script type="application/javascript" src="lib/bundle.js"></script>
+  </body>
+</html>

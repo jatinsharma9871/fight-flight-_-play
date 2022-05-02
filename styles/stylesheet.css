@@ -1,0 +1,172 @@
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+  font-family: 'Russo One', sans-serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header, .links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+header {
+  border-bottom: 1px solid lightgray;
+}
+
+main {
+  position: fixed;
+}
+
+.links {
+  width: 15em;
+}
+
+.link-image {
+  width: 35px;
+}
+
+#modal, #modal-pause, #gameover {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    width: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#gameover {
+  background-color: rgba(0,0,0,0);
+}
+
+div.gameover-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+div.gameover-content > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#modal-pause, #gameover {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+div.pause {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.pause > span {
+  font-size: 10em;
+}
+
+.pause-image {
+  width: 100px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.plane-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
+}
+
+  form.plane-form input {
+    visibility: hidden;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+    div.plane-options span {
+      visibility: hidden;
+    }
+
+    div.plane-options input + img {
+      cursor:pointer;
+      transition: 2s;
+      transition-property: height;
+      height: 3em;
+    }
+
+    div.plane-options input:checked + img {
+      height: 5em;
+    }
+
+    div.plane-options input:checked + img + span {
+      visibility: visible;
+    }
+
+div.game-diff {
+  display: flex;
+  justify-content: space-around;
+  height: 2em;
+}
+
+  div.game-diff input + span {
+    cursor: pointer;
+  }
+
+  div.game-diff input:checked + span {
+    border-bottom: 2px solid;
+  }
+
+button.start-button {
+  margin: auto;
+  padding: 5px;
+  background: none;
+  border: none;
+  font-family: 'Russo One', sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+}
+
+button.start-button:focus {
+  outline: none;
